@@ -8,7 +8,6 @@ import java.util.AbstractCollection;
 interface Shape{ //One of implementation of Polymorphism
     void draw(int height);
 }
-//
 //TriangleSS implements Shape interface
 class drawTriangleSS implements Shape{
    @Override //Overriding (Mengganti secara paksa content dari function dalam polymorphism)
