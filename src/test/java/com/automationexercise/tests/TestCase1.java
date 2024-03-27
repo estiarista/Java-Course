@@ -6,8 +6,10 @@ import io.qameta.allure.*;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import java.io.FileNotFoundException;
 import java.io.IOException;
+
+
 
 @Epic("Regression Tests")
 @Feature("User")
@@ -101,3 +103,4 @@ public class TestCase1 extends TestBasic {
         new AccountDeletedPage(getDriver()).continueButtonClick();
     }
 }
+

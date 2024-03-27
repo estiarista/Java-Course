@@ -3,8 +3,8 @@ package com.automationexercise.utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 import java.io.IOException;
 
@@ -23,11 +23,11 @@ public class BrowserManager {
             chromeOptions.addArguments("--headless");
             driver = new ChromeDriver(chromeOptions);
 
-        } else if (name.equalsIgnoreCase("Firefox")) {
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            firefoxOptions.addArguments("--headless");
-            firefoxOptions.addArguments("--private");
-            driver = new FirefoxDriver(firefoxOptions);
+        } else if (name.equalsIgnoreCase("Edge")) {
+            EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("--headless");
+            edgeOptions.addArguments("--private");
+            driver = new EdgeDriver(new EdgeOptions());
         }
         return driver;
     }
